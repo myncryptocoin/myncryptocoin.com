@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MYNCryptoCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official site for MYNCryptoCoin." />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background:#0b0b0b; color:#fff; }
+    header { background:#111; padding:1.5rem; text-align:center; }
+    nav a { color:#fff; margin:0 1rem; text-decoration:none; }
+    .hero { padding:3rem 1.5rem; text-align:center; }
+    .section { padding:2rem 1.5rem; max-width:960px; margin:0 auto; }
+    .card { background:#161616; padding:1.5rem; border:1px solid #222; border-radius:6px; margin-bottom:1.5rem; }
+    footer { background:#111; text-align:center; padding:1rem; font-size:0.8rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MYNCryptoCoin</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#token">Token</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Official Launch Portal</h2>
+    <p>Transparent. Compliant. Exchange-ready.</p>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About</h3>
+    <div class="card">
+      <p>MYNCryptoCoin (MYN) is the utility asset for the BKPNYC ecosystem.</p>
+      <p>Use this page as the canonical source.</p>
+    </div>
+  </section>
+
+  <section id="token" class="section">
+    <h3>Token Details</h3>
+    <div class="card">
+      <p><strong>Contract:</strong> paste your official contract here</p>
+      <p><strong>Chain:</strong> BNB Smart Chain (BEP-20) or whatever you confirm</p>
+      <p><strong>Total Supply:</strong> put supply here</p>
+      <p><strong>Explorer:</strong> add BscScan / TronScan / Etherscan link</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <div class="card">
+      <p>Email: <a href="mailto:compliance@bkpropertiesnyc.com">compliance@bkpropertiesnyc.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MYNCryptoCoin. All rights reserved.</p>
+  </footer>
+</body>
+</html>

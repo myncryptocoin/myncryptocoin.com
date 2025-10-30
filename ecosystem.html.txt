@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Utility & Ecosystem | MYNCryptoCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#0b0b0b; color:#fff; }
+    header, footer { background:#101010; }
+    .topbar { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+    nav a { color:#fff; text-decoration:none; margin-left:1rem; }
+    nav a.active { border-bottom:2px solid #fff; }
+    .section { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
+    .card { background:#151515; border:1px solid #222; border-radius:6px; padding:1.5rem; margin-bottom:1.5rem; }
+    footer { text-align:center; padding:1rem; font-size:0.8rem; color:#999; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div><strong>MYNCryptoCoin</strong></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ecosystem.html" class="active">Utility</a>
+        <a href="buy.html">Buy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <h1>Utility & Brand Alignment</h1>
+    <div class="card">
+      <h2>1. BKPNYC compliance layer</h2>
+      <p>MYN can be used as a proof-of-affiliation token for internal docs, compliance packets, and facilitation binders.</p>
+    </div>
+    <div class="card">
+      <h2>2. Access to future MY-branded services</h2>
+      <p>Planned hooks: MY Bank, MY Vault, MY Shop, humanitarian/project funding rails.</p>
+    </div>
+    <div class="card">
+      <h2>3. Anti-fraud signaling</h2>
+      <p>Because you control the domain, this page becomes the “real” source. Anything off-domain can be flagged as unverified.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 MYNCryptoCoin.
+  </footer>
+</body>
+</html>

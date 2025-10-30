@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | MYNCryptoCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#0b0b0b; color:#fff; }
+    header, footer { background:#101010; }
+    .topbar { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+    nav a { color:#fff; text-decoration:none; margin-left:1rem; }
+    nav a.active { border-bottom:2px solid #fff; }
+    .section { max-width:600px; margin:0 auto; padding:2rem 1rem; }
+    .card { background:#151515; border:1px solid #222; border-radius:6px; padding:1.5rem; }
+    label { display:block; margin-bottom:0.5rem; }
+    input, textarea { width:100%; padding:0.5rem; margin-bottom:1rem; border:1px solid #333; border-radius:4px; background:#0b0b0b; color:#fff; }
+    button { background:#fff; color:#000; border:none; padding:0.7rem 1.3rem; border-radius:4px; cursor:pointer; }
+    footer { text-align:center; padding:1rem; font-size:0.8rem; color:#999; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div><strong>MYNCryptoCoin</strong></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ecosystem.html">Utility</a>
+        <a href="buy.html">Buy</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <h1>Contact</h1>
+    <div class="card">
+      <p>Email is preferred.</p>
+      <p><strong>Email:</strong> <a href="mailto:compliance@bkpropertiesnyc.com">compliance@bkpropertiesnyc.com</a></p>
+      <p><strong>Subject lines to use:</strong></p>
+      <ul>
+        <li>“MYN Listing Request”</li>
+        <li>“MYN Compliance / Docs”</li>
+        <li>“MYN OTC / Bulk”</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:1.5rem;">
+      <h2>Quick form (static demo)</h2>
+      <!-- This won't send without backend. For static hosting. -->
+      <form>
+        <label for="name">Name</label>
+        <input id="name" name="name" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" />
+
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg" rows="4"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p>To actually receive messages, point the form to Formspree, Zoho Forms, or another form endpoint.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 MYNCryptoCoin.
+  </footer>
+</body>
+</html>

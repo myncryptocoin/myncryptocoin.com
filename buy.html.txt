@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buy MYN | MYNCryptoCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#0b0b0b; color:#fff; }
+    header, footer { background:#101010; }
+    .topbar { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+    nav a { color:#fff; text-decoration:none; margin-left:1rem; }
+    nav a.active { border-bottom:2px solid #fff; }
+    .section { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
+    .card { background:#151515; border:1px solid #222; border-radius:6px; padding:1.5rem; margin-bottom:1.5rem; }
+    code { background:#000; padding:0.15rem 0.3rem; border-radius:3px; }
+    .btn { display:inline-block; background:#fff; color:#000; padding:0.7rem 1.3rem; text-decoration:none; border-radius:4px; font-weight:bold; }
+    footer { text-align:center; padding:1rem; font-size:0.8rem; color:#999; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div><strong>MYNCryptoCoin</strong></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ecosystem.html">Utility</a>
+        <a href="buy.html" class="active">Buy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <h1>Buy / Trade MYN</h1>
+
+    <div class="card">
+      <h2>1. Official contract</h2>
+      <p>Copy this into your wallet or DEX. Verify in this site only.</p>
+      <p><strong>Contract:</strong> <code>PASTE_CONTRACT_HERE</code></p>
+      <p><strong>Chain:</strong> PASTE_CHAIN_HERE</p>
+    </div>
+
+    <div class="card">
+      <h2>2. DEX link</h2>
+      <p>Put your real link here when ready:</p>
+      <p>
+        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=PASTE_CONTRACT_HERE" target="_blank" rel="noopener">Open DEX</a>
+      </p>
+      <p>or a Jumper/Llama/aggregator link when you finalize it.</p>
+    </div>
+
+    <div class="card">
+      <h2>3. OTC / bulk</h2>
+      <p>For large allocations, contact: <a href="mailto:compliance@bkpropertiesnyc.com">compliance@bkpropertiesnyc.com</a></p>
+      <p>Subject: “MYN OTC”</p>
+    </div>
+
+    <div class="card">
+      <h2>4. Warnings</h2>
+      <ul>
+        <li>Never buy from an address not listed on this domain.</li>
+        <li>Match chain and contract exactly.</li>
+        <li>If someone claims to be BKPNYC and gives another contract, verify here first.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 MYNCryptoCoin.
+  </footer>
+</body>
+</html>

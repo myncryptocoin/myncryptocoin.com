@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | MYNCryptoCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#0b0b0b; color:#fff; }
+    header, footer { background:#101010; }
+    .topbar { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+    nav a { color:#fff; text-decoration:none; margin-left:1rem; }
+    nav a.active { border-bottom:2px solid #fff; }
+    .section { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
+    .card { background:#151515; border:1px solid #222; border-radius:6px; padding:1.5rem; }
+    footer { text-align:center; padding:1rem; font-size:0.8rem; color:#999; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div><strong>MYNCryptoCoin</strong></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="ecosystem.html">Utility</a>
+        <a href="buy.html">Buy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <h1>About MYNCryptoCoin</h1>
+    <div class="card">
+      <p>MYNCryptoCoin (MYN) is the digital asset aligned to the B&amp;K Properties NYC, LLC ecosystem and the broader MY-branded products.</p>
+      <p>Purpose: act as the on-chain representation of participation, access, and priority in the BKPNYC compliance-based financial stack.</p>
+      <p>Vision: to bridge nonstandard, institutional, and alternative-finance activity into a transparent, tokenized record.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Who runs it</h2>
+    <div class="card">
+      <p><strong>Entity:</strong> B&amp;K Properties NYC, LLC</p>
+      <p><strong>Registered Address:</strong> 8 The Green, Suite A, Dover, DE 19901</p>
+      <p><strong>Mailing Address:</strong> PO Box 35, Boca Raton, FL 33429</p>
+      <p><strong>Florida Business Address:</strong> 170 NE 2nd Street, Unit 35, Boca Raton, FL 33429</p>
+      <p><strong>Compliance Email:</strong> <a href="mailto:compliance@bkpropertiesnyc.com">compliance@bkpropertiesnyc.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 MYNCryptoCoin.
+  </footer>
+</body>
+</html>
