@@ -1,68 +1,116 @@
-<img src="assets/MYnCoin_Logo.png" alt="MYnCoin Symbol" style="width:120px;margin-top:10px;">
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="audit.html">Audit</a> |
-  <a href="governance.html">Governance</a> |
-  <a href="whitepaper.html">Whitepaper</a> |
-  <a href="exchange.html">Exchange Kit</a> |
-  <a href="marketing.html">Marketing</a> |
-  <a href="deployment.html">Deployment</a> |
-  <a href="compliance.html">Compliance</a>
-</nav>
-<hr />
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About | MYNCryptoCoin</title>
+  <title>About | MYnCryptoCoin (MYN)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#0b0b0b; color:#fff; }
-    header, footer { background:#101010; }
-    .topbar { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem; }
-    nav a { color:#fff; text-decoration:none; margin-left:1rem; }
-    nav a.active { border-bottom:2px solid #fff; }
-    .section { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
-    .card { background:#151515; border:1px solid #222; border-radius:6px; padding:1.5rem; }
-    footer { text-align:center; padding:1rem; font-size:0.8rem; color:#999; }
+    body {
+      background:#0b0b0b;
+      color:#fff;
+      font-family:Arial, sans-serif;
+      margin:0;
+      position:relative;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    /* Watermark background */
+    body::before {
+      content:"";
+      background:url('assets/MYnCoin_Logo.png') no-repeat center center;
+      background-size:60%;
+      opacity:0.06;
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      z-index:0;
+    }
+    nav {
+      background:#111;
+      text-align:center;
+      padding:0.8rem 0;
+      z-index:10;
+      position:relative;
+    }
+    nav a {
+      color:#9fd5ff;
+      text-decoration:none;
+      margin:0 0.7rem;
+      font-weight:bold;
+    }
+    .section {
+      max-width:1000px;
+      margin:2.5rem auto;
+      padding:2rem;
+      background:rgba(21,21,21,0.88);
+      border:1px solid #333;
+      border-radius:8px;
+      position:relative;
+      z-index:1;
+    }
+    h1 {
+      text-align:center;
+      margin-top:0;
+    }
+    .card p {
+      line-height:1.6;
+      margin:0.8rem 0;
+    }
+    img.logo {
+      display:block;
+      margin:1.5rem auto 0.5rem;
+      width:120px;
+      position:relative;
+      z-index:2;
+    }
+    footer {
+      background:#111;
+      text-align:center;
+      color:#aaa;
+      font-size:0.85rem;
+      padding:1.3rem 0;
+      margin-top:3rem;
+      position:relative;
+      z-index:2;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div><strong>MYNCryptoCoin</strong></div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="ecosystem.html">Utility</a>
-        <a href="buy.html">Buy</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <img src="assets/MYnCoin_Logo.png" alt="MYnCoin Logo" class="logo" />
 
-  <section class="section">
-    <h1>About MYNCryptoCoin</h1>
-    <div class="card">
-      <p>MYnCoin v3 is a verified BEP-20 token designed for the MYTM Token Ecosystem.</p>
-      <p>Purpose: act as the on-chain representation of participation, access, priority in the MY™️ brand, and all it shall encompass. </p>
-      <p>Vision: to bridge nonstandard, multi-institutional, and diversity, tokenized record.</p>
-    </div>
-  </section>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="audit.html">Audit</a> |
+    <a href="governance.html">Governance</a> |
+    <a href="whitepaper.html">Whitepaper</a> |
+    <a href="exchange.html">Exchange Kit</a> |
+    <a href="marketing.html">Marketing</a> |
+    <a href="deployment.html">Deployment</a> |
+    <a href="compliance.html">Compliance</a>
+  </nav>
 
-  <section class="section">
-    <h2>Who runs it</h2>
+  <section id="about" class="section">
+    <h1>About MYnCryptoCoin (MYN)</h1>
     <div class="card">
-      <p><strong>Entity:</strong> B&amp;K Properties NYC, LLC</p>
-      <p><strong>Registered Address:</strong> 8 The Green, Suite A, Dover, DE 19901</p>
-      <p><strong>Mailing Address:</strong> PO Box 35, Boca Raton, FL 33429</p>
-      <p><strong>Florida Business Address:</strong> 170 NE 2nd Street, Unit 35, Boca Raton, FL 33429</p>
-      <p><strong>Compliance Email:</strong> <a href="mailto:compliance@bkpropertiesnyc.com">compliance@bkpropertiesnyc.com</a></p>
+      <p><strong>MYnCryptoCoin (MYN)</strong> is the digital asset of the <strong>MY™ Brand Ecosystem</strong> — a compliance-driven, purpose-built framework quietly supported by <strong>B&K Properties NYC, LLC (BKPNYC)</strong>. BKPNYC serves as the structural component that ensures the coin’s operational and institutional integrity.</p>
+
+      <p>As part of the MY™ brand, MYnCryptoCoin is designed to integrate across multiple industries including <strong>banking, vault and asset services, naturopathy health & wellness, clothing, blockchain technology, retail, food, and lifestyle ventures</strong>. Its function extends beyond currency — acting as a digital signature of trust, quality, and transparency within every sector it touches.</p>
+
+      <p>MYN operates on the <strong>BNB Smart Chain (BEP-20)</strong>, featuring a finite total supply of <strong>7,777,777 tokens</strong>. It follows an escalating liquidity model with a defined 36-month maturity period, ensuring responsible valuation growth and stability.</p>
+
+      <p>Through structured governance, progressive audits, and the legal protection of the MY™ trademark, MYnCryptoCoin maintains ethical alignment with both traditional and digital financial systems. Ownership may be renounced upon full maturity to safeguard community integrity and prevent centralized control.</p>
+
+      <p><strong>Mission:</strong> To bridge innovation, accountability, and human-centered value into one evolving ecosystem that respects compliance, empowers industries, and honors individuality.</p>
+
+      <p><strong>Motto:</strong> “It’s about You.”</p>
     </div>
   </section>
 
   <footer>
-    © 2025 MYNCryptoCoin.
+    © 2025 MYnCryptoCoin · Part of the MY™ Brand Ecosystem.  
+    BKPNYC functions as the institutional component supporting the MY™ vision across all sectors.  
+    <br><em>“It’s about You.”</em>
   </footer>
 </body>
 </html>
