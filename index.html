@@ -2,61 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MYnCryptoCoin (MYN)</title>
+  <title>MYnCryptoCoin (MYN) | Official Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official site for MYNCryptoCoin." />
+  <meta name="description" content="Official site for MYnCryptoCoin (MYN), part of the MY™ Brand Ecosystem managed by BKPNYC." />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#0b0b0b; color:#fff; }
-    header { background:#111; padding:1.5rem; text-align:center; }
-    nav a { color:#fff; margin:0 1rem; text-decoration:none; }
-    .hero { padding:3rem 1.5rem; text-align:center; }
-    .section { padding:2rem 1.5rem; max-width:960px; margin:0 auto; }
-    .card { background:#161616; padding:1.5rem; border:1px solid #222; border-radius:6px; margin-bottom:1.5rem; }
-    footer { background:#111; text-align:center; padding:1rem; font-size:0.8rem; }
+    body {
+      background:#0b0b0b;
+      color:#fff;
+      font-family:Arial, sans-serif;
+      margin:0;
+      position:relative;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    body::before {
+      content:"";
+      background:url('assets/MYnCoin_Logo.png') no-repeat center center;
+      background-size:60%;
+      opacity:0.06;
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      z-index:0;
+    }
+    header {
+      text-align:center;
+      padding:2rem 1rem 1rem;
+      background:#111;
+      z-index:2;
+      position:relative;
+    }
+    header img {
+      width:130px;
+      display:block;
+      margin:0 auto 1rem;
+    }
+    nav {
+      background:#111;
+      text-align:center;
+      padding:0.8rem 0;
+      z-index:10;
+      position:relative;
+    }
+    nav a {
+      color:#9fd5ff;
+      text-decoration:none;
+      margin:0 0.7rem;
+      font-weight:bold;
+    }
+    .hero {
+      text-align:center;
+      padding:3rem 1.5rem 2rem;
+      position:relative;
+      z-index:1;
+    }
+    .hero h1 { font-size:2.2rem; margin-bottom:0.5rem; }
+    .hero p { font-size:1.1rem; color:#ccc; }
+    .section {
+      max-width:1000px;
+      margin:2rem auto;
+      padding:2rem;
+      background:rgba(21,21,21,0.88);
+      border:1px solid #333;
+      border-radius:8px;
+      position:relative;
+      z-index:1;
+    }
+    h2 {text-align:center;margin-top:0;}
+    .button-grid {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:1rem;
+      margin-top:1.5rem;
+    }
+    .button-grid a {
+      background:#111;
+      color:#9fd5ff;
+      padding:0.8rem 1.2rem;
+      border:1px solid #333;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:all 0.2s ease;
+    }
+    .button-grid a:hover {
+      background:#9fd5ff;
+      color:#0b0b0b;
+    }
+    footer {
+      background:#111;
+      text-align:center;
+      color:#aaa;
+      font-size:0.85rem;
+      padding:1.3rem 0;
+      margin-top:3rem;
+      position:relative;
+      z-index:2;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>MYNCryptoCoin</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#token">Token</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <img src="assets/MYnCoin_Logo.png" alt="MYnCryptoCoin Logo">
+    <h1>MYnCryptoCoin (MYN)</h1>
+    <p>Part of the MY™ Brand Ecosystem • Managed by B&K Properties NYC, LLC (BKPNYC)</p>
   </header>
 
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="audit.html">Audit</a> |
+    <a href="governance.html">Governance</a> |
+    <a href="whitepaper.html">Whitepaper</a> |
+    <a href="exchange.html">Exchange Kit</a> |
+    <a href="marketing.html">Marketing</a> |
+    <a href="deployment.html">Deployment</a> |
+    <a href="compliance.html">Compliance</a>
+  </nav>
+
   <section class="hero">
-    <h2>Official Launch Portal</h2>
-    <p>Transparent. Compliant. Exchange-ready.</p>
+    <h1>Official MYnCryptoCoin Portal</h1>
+    <p>Transparent • Compliant • Blockchain-Integrated • Brand-Driven</p>
   </section>
 
-  <section id="about" class="section">
-    <h3>About</h3>
-    <div class="card">
-      <p>MYNCryptoCoin (MYN) is the utility asset for the MY™️ ecosystem.</p>
-      <p>Use this page as the canonical source.</p>
+  <section class="section">
+    <h2>What is MYnCryptoCoin?</h2>
+    <p>
+      <strong>MYnCryptoCoin (MYN)</strong> is the cornerstone digital asset of the <strong>MY™ Brand Ecosystem</strong>, 
+      created to unify multiple industries — banking, vaulting, wellness, fashion, blockchain, and retail — 
+      under one compliant and ethically governed financial architecture.
+    </p>
+    <p>
+      Powered by <strong>B&K Properties NYC, LLC (BKPNYC)</strong>, MYN operates on the <strong>BNB Smart Chain (BEP-20)</strong> 
+      with a finite total supply of <strong>7,777,777 tokens</strong> and a 36-month liquidity maturity model.  
+      Each phase of escalation enhances transparency and strengthens the base floor of the MYN ecosystem.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Explore MYN Documents & Governance</h2>
+    <p style="text-align:center;">
+      Access official MYnCryptoCoin governance and compliance materials, audits, and media documentation below.
+    </p>
+
+    <div class="button-grid">
+      <a href="about.html">About</a>
+      <a href="audit.html">Audit</a>
+      <a href="governance.html">Governance</a>
+      <a href="whitepaper.html">Whitepaper</a>
+      <a href="exchange.html">Exchange Kit</a>
+      <a href="marketing.html">Marketing Pack</a>
+      <a href="deployment.html">Deployment</a>
+      <a href="compliance.html">Compliance</a>
     </div>
   </section>
 
-  <section id="token" class="section">
-    <h3>Token Details</h3>
-    <div class="card">
-      <p><strong>Contract:</strong> p0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</p>
-      <p><strong>Chain:</strong> BNB Smart Chain (BEP-20)</p>
-      <p><strong>Total Supply:</strong> 7777777 in circulation (18 decimals). A hard cap of 17,888,777 MYN (18 decimals)l; never be minted in full</p>
-      <p><strong>Explorer:</strong> https://bscscan.com/address/0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</p>
-    </div>
+  <section class="section">
+    <h2>Token Overview</h2>
+    <p><strong>Contract:</strong> 0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</p>
+    <p><strong>Chain:</strong> BNB Smart Chain (BEP-20)</p>
+    <p><strong>Total Supply:</strong> 7,777,777 MYN (hard-cap 17,888,777)</p>
+    <p><strong>Explorer:</strong> 
+      <a href="https://bscscan.com/address/0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2" target="_blank" rel="noopener" style="color:#9fd5ff;">
+        View on BscScan
+      </a>
+    </p>
   </section>
 
-  <section id="contact" class="section">
-    <h3>Contact</h3>
-    <div class="card">
-      <p>Email: <a href="mailto:admin@myncryptocoin.com">admin@myncryptocoin.com</a></p>
-    </div>
+  <section class="section">
+    <h2>Contact & Compliance</h2>
+    <p style="text-align:center;">
+      For institutional inquiries, partnership, or verification requests, contact:<br>
+      <a href="mailto:compliance@bkpropertiesnyc.com" style="color:#9fd5ff;">compliance@bkpropertiesnyc.com</a>
+    </p>
   </section>
 
   <footer>
-    <p>© 2025 MYNCryptoCoin. All rights reserved.</p>
+    © 2025 MYnCryptoCoin · Part of the MY™ Brand Ecosystem.  
+    BKPNYC provides structural support for the MY™ vision across all industries.  
+    <br><em>“It’s about You.”</em>
   </footer>
 </body>
 </html>
