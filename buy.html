@@ -1,86 +1,141 @@
-<img src="assets/MYnCoin_Logo.png" alt="MYnCoin Symbol" style="width:120px;margin-top:10px;">
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="audit.html">Audit</a> |
-  <a href="governance.html">Governance</a> |
-  <a href="whitepaper.html">Whitepaper</a> |
-  <a href="exchange.html">Exchange Kit</a> |
-  <a href="marketing.html">Marketing</a> |
-  <a href="deployment.html">Deployment</a> |
-  <a href="compliance.html">Compliance</a>
-</nav>
-<hr />
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <title>Buy MYN | MYNCryptoCoin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buy MYnCoin (MYN)</title>
+  <meta name="description" content="Official MYnCoin (MYN) buy page with live price, pool, and LP lock links." />
+  <link rel="icon" type="image/svg+xml" href="/assets/MYnCoin_32x32.svg" />
+  <link rel="alternate icon" type="image/png" href="/assets/MYnCoin_32x32.png" />
   <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#0b0b0b; color:#fff; }
-    header, footer { background:#101010; }
-    .topbar { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem; }
-    nav a { color:#fff; text-decoration:none; margin-left:1rem; }
-    nav a.active { border-bottom:2px solid #fff; }
-    .section { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
-    .card { background:#151515; border:1px solid #222; border-radius:6px; padding:1.5rem; margin-bottom:1.5rem; }
-    code { background:#000; padding:0.15rem 0.3rem; border-radius:3px; }
-    .btn { display:inline-block; background:#fff; color:#000; padding:0.7rem 1.3rem; text-decoration:none; border-radius:4px; font-weight:bold; }
-    footer { text-align:center; padding:1rem; font-size:0.8rem; color:#999; }
+    :root { --bg:#0b0b0b; --card:#121212; --fg:#eaeaea; --muted:#9aa0a6; --border:#1f1f1f; --accent:#d4af37; --good:#36d399; --bad:#f87272; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:980px;margin:28px auto;padding:0 16px}
+    header{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+    header img{width:32px;height:32px}
+    h1{font-size:24px;margin:0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.buy{background:var(--accent);color:#111}
+    .btn.alt{background:#1f2937;color:var(--fg)}
+    code{background:#111;color:#ddd;padding:2px 6px;border-radius:6px}
+    .muted{color:var(--muted)}
+    #tape{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:#151515;border:1px solid var(--border);border-radius:10px;padding:8px 12px;margin:10px 0 14px}
+    .pill{padding:2px 8px;border-radius:999px;background:#181818}
+    .up{color:var(--good)} .down{color:var(--bad)}
+    ol{margin:8px 0 0 18px}
+    footer{margin:20px 0 40px;color:var(--muted);font-size:12px}
+    .section{margin-top:16px}
+    .kbd{padding:2px 6px;border:1px solid var(--border);border-radius:6px;background:#101010}
   </style>
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div><strong>MYNCryptoCoin</strong></div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="ecosystem.html">Utility</a>
-        <a href="buy.html" class="active">Buy</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <main class="wrap">
+    <header>
+      <img src="/assets/MYnCoin_32x32.svg" alt="MYnCoin logo" />
+      <div>
+        <h1>Buy MYnCoin (MYN)</h1>
+        <div class="muted">BNB Smart Chain • BEP-20 • 18 decimals</div>
+      </div>
+    </header>
 
-  <section class="section">
-    <h1>Buy / Trade MYN</h1>
-
-    <div class="card">
-      <h2>1. Official contract</h2>
-      <p>Copy this into your wallet or DEX. Verify in this site only.</p>
-      <p><strong>Contract:</strong> <code>0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</code></p>
-      <p><strong>Chain:</strong> https://bscscan.com/address/0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2#readContractE</p>
+    <!-- Live trading bar -->
+    <div id="tape" aria-live="polite">
+      <strong>MYN/BNB</strong>
+      <span id="p" class="pill">—</span>
+      <span id="c" class="pill muted">Δ5m —</span>
+      <span id="b" class="pill">Buys 0</span>
+      <span id="s" class="pill">Sells 0</span>
+      <span id="v" class="pill muted">Vol 24h —</span>
+      <span id="u" class="muted">Updating…</span>
     </div>
 
-    <div class="card">
-      <h2>2. DEX link</h2>
-      <p>Put your real link here when ready:</p>
-      <p>
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=PASTE_CONTRACT_HERE" target="_blank" rel="noopener">Open DEX</a>
-      </p>
-      <p>or a Jumper/Llama/aggregator link when you finalize it.</p>
-    </div>
+    <!-- Action buttons -->
+    <section class="card">
+      <div class="row" style="margin-bottom:8px">
+        <a class="btn buy" href="https://pancakeswap.finance/swap?outputCurrency=0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2" target="_blank" rel="noopener">Buy on PancakeSwap</a>
+        <a class="btn alt" href="https://pancakeswap.finance/liquidity/pool/bsc/0x92906A29E9cD3F0FB12c7349d3812036A26371Ab" target="_blank" rel="noopener">View MYN/BNB Pool</a>
+        <a class="btn alt" href="https://www.pinksale.finance/pinklock/bsc/0x98156585280B8fc9E52Bc91054474619f9a05713" target="_blank" rel="noopener">LP Lock (PinkLock)</a>
+      </div>
+      <div class="muted">Contract: <code>0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</code></div>
+    </section>
 
-    <div class="card">
-      <h2>3. OTC / bulk</h2>
-      <p>For large allocations, contact: <a href="mailto:admin@myncryptocoin.com">compliance@bkpropertiesnyc.com</a></p>
-      <p>Subject: “MYN OTC”</p>
-    </div>
+    <!-- How to buy -->
+    <section class="card section">
+      <h2 style="margin:0 0 8px;font-size:18px">How to buy</h2>
+      <ol>
+        <li>Add BNB Smart Chain in your wallet. In MetaMask: Settings → Networks → add BSC.</li>
+        <li>Add MYN as a custom token with contract <code>0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</code> and decimals <code>18</code>.</li>
+        <li>Get BNB from your preferred on-ramp, send to your BSC wallet.</li>
+        <li>Click <span class="kbd">Buy on PancakeSwap</span> and swap BNB → MYN. Start slippage at <code>0.5%</code>.</li>
+        <li>Confirm you can both buy and sell with a small test first.</li>
+      </ol>
+    </section>
 
-    <div class="card">
-      <h2>4. Warnings</h2>
-      <ul>
-        <li>Never buy from an address not listed on this domain.</li>
-        <li>Match chain and contract exactly.</li>
-        <li>If someone claims to be associated to BKPNYC or as part of the MY™️ team and gives another contract, it is not valid; verify here first.</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Supply and transparency -->
+    <section class="card section">
+      <h2 style="margin:0 0 8px;font-size:18px">Supply & transparency</h2>
+      <div class="muted">
+        Treasury: <code>0xD08599f6BFa47cDA06cF69B9a0B82221d63D24Da</code> •
+        Team/Vesting: <code>0xf6e9b1e8e893af97b0bc85e5f2d89bfc4772970d</code> •
+        LP/Lock: <code>0x407993575c91ce7643a4d4cCACc9A98c36eE1BBE</code> •
+        Burn: <code>0x2cA3d6b563327A5B6966728cB6b2Ec8219989752</code>
+      </div>
+      <div class="muted" style="margin-top:6px">
+        LP Lock proof: <a class="muted" href="https://www.pinksale.finance/pinklock/bsc/0x98156585280B8fc9E52Bc91054474619f9a05713" target="_blank" rel="noopener">PinkLock link</a>
+      </div>
+    </section>
 
-  <footer>
-    © 2025 MYNCryptoCoin.
-  </footer>
+    <footer>
+      © MYnCoin • B&K Properties NYC, LLC • Contract: 0x5E66…7ea2 • This page is informational.
+    </footer>
+  </main>
+
+  <!-- Live bar script (Dexscreener API) -->
+  <script>
+  (async function(){
+    const TOKEN = "0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2";
+    const url = `https://api.dexscreener.com/tokens/v1/bsc/${TOKEN}`;
+    const $ = id => document.getElementById(id);
+    const fmt = (n,d=6)=>{
+      if(n==null) return "—";
+      const v=Number(n); if(!isFinite(v)) return "—";
+      if(v>=1) return v.toLocaleString(undefined,{maximumFractionDigits:2});
+      if(v>=0.01) return v.toLocaleString(undefined,{maximumFractionDigits:4});
+      return v.toLocaleString(undefined,{maximumSignificantDigits:d});
+    };
+    async function pull(){
+      const r = await fetch(url,{cache:"no-store"});
+      if(!r.ok) throw new Error("dexscreener");
+      const d = await r.json();
+      return d?.pairs?.[0] || d?.[0];
+    }
+    async function update(){
+      try{
+        const p = await pull(); if(!p) return;
+        const price = p.priceUsd ?? p.priceNative ?? p.price;
+        const c5 = Number(p.priceChange?.m5 ?? 0);
+        const buys = p.txns?.m5?.buys ?? 0;
+        const sells = p.txns?.m5?.sells ?? 0;
+        const vol24 = p.volume?.h24 ?? p.volume24h ?? 0;
+
+        $("p").textContent = `$${fmt(price)}`;
+        const c = $("c");
+        c.textContent = `Δ5m ${c5>=0?"+":""}${fmt(c5,3)}%`;
+        c.className = `pill ${c5>=0 ? "up" : "down"}`;
+        $("b").textContent = `Buys ${buys}`;
+        $("s").textContent = `Sells ${sells}`;
+        $("v").textContent = `Vol 24h $${fmt(vol24,2)}`;
+        $("u").textContent = `Updated ${new Date().toLocaleTimeString()}`;
+      } catch {
+        $("u").textContent = "Update failed";
+      }
+    }
+    update();
+    setInterval(update, 5000);
+  })();
+  </script>
 </body>
 </html>
