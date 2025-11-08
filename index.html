@@ -50,20 +50,42 @@
 
 <script>
 (async function(){
-  const TOKEN="0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2";
-  const url=`https://api.dexscreener.com/tokens/v1/bsc/${TOKEN}`;
-  const $=id=>document.getElementById(id);
-  const fmt=(n,d=6)=>{if(n==null)return"—";const v=+n;if(!isFinite(v))return"—";
-    if(v>=1)return v.toLocaleString(undefined,{maximumFractionDigits:2});
-    if(v>=0.01)return v.toLocaleString(undefined,{maximumFractionDigits:4});
-    return v.toLocaleString(undefined,{maximumSignificantDigits:d});};
-  async function pull(){const r=await fetch(url,{cache:"no-store"});const d=await r.json();return d?.pairs?.[0]||d?.[0]}
-  async function update(){try{const p=await pull();if(!p)return;
-    const price=p.priceUsd??p.priceNative??p.price, c5=+(p.priceChange?.m5??0);
-    $("p").textContent=`$${fmt(price)}`; const c=$("c"); c.textContent=`Δ5m ${c5>=0?"+":""}${fmt(c5,3)}%`;
-    c.className=`pill ${c5>=0?"up":"down"}`; $("b").textContent=`Buys ${p.txns?.m5?.buys??0}`;
-    $("s").textContent=`Sells ${p.txns?.m5?.sells??0}`; $("v").textContent=`Vol 24h $${fmt(p.volume?.h24??p.volume24h??0,2)}`;
-    $("u").textContent=`Updated ${new Date().toLocaleTimeString()}`;}catch(e){$("u").textContent="Update failed"}}update();setInterval(update,5000);
+  const TOKEN = "0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2"; // MYN
+  const url = `https://api.dexscreener.com/latest/dex/tokens/${TOKEN}`;
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n,d=6)=>{ if(n==null) return "—"; const v=+n;
+    if(!isFinite(v)) return "—"; if(v>=1) return v.toLocaleString(undefined,{maximumFractionDigits:2});
+    if(v>=0.01) return v.toLocaleString(undefined,{maximumFractionDigits:4});
+    return v.toLocaleString(undefined,{maximumSignificantDigits:d}); };
+
+  async function pull(){
+    const r = await fetch(url, {cache:"no-store"});
+    if(!r.ok) throw new Error("Dexscreener");
+    const d = await r.json();
+    // Prefer BSC pair
+    return d?.pairs?.find(p => p.chainId === "bsc") || d?.pairs?.[0];
+  }
+
+  async function update(){
+    try{
+      const p = await pull(); if(!p) return;
+      const price = p.priceUsd ?? p.priceNative ?? p.price;
+      const c5 = Number(p.priceChange?.m5 ?? 0);
+      const buys = p.txns?.m5?.buys ?? 0;
+      const sells = p.txns?.m5?.sells ?? 0;
+      const vol24 = p.volume?.h24 ?? p.volume24h ?? 0;
+
+      (document.getElementById("p")||$("myn-p")).textContent = `$${fmt(price)}`;
+      const changeEl = (document.getElementById("c")||$("myn-c"));
+      changeEl.textContent = `Δ5m ${c5>=0?"+":""}${fmt(c5,3)}%`;
+      changeEl.className = `pill ${c5>=0 ? "up" : "down"}`;
+      (document.getElementById("b")||$("myn-b")).textContent = `Buys ${buys}`;
+      (document.getElementById("s")||$("myn-s")).textContent = `Sells ${sells}`;
+      (document.getElementById("v")||$("myn-v")).textContent = `Vol 24h $${fmt(vol24,2)}`;
+      (document.getElementById("u")||$("myn-u")).textContent = `Updated ${new Date().toLocaleTimeString()}`;
+    }catch{ (document.getElementById("u")||$("myn-u")).textContent = "Update failed"; }
+  }
+  update(); setInterval(update, 5000);
 })();
 </script>
 </body></html>
