@@ -1,23 +1,31 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Audit • MYnCoin</title>
-<link rel="icon" type="image/svg+xml" href="/assets/MYnCoin_32x32.svg"><link rel="stylesheet" href="/_shared_header.css">
+<link rel="icon" type="image/svg+xml" href="/assets/MYnCoin_32x32.svg">
+<link rel="preload" href="/assets/css/style.css?v=4" as="style"><link rel="stylesheet" href="/assets/css/style.css?v=4">
+<style>
+:root{--bg:#0b0b0b;--card:#121212;--fg:#eaeaea;--muted:#9aa0a6;--border:#1f1f1f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:10;background:#0b0b0b;border-bottom:1px solid var(--border)}
+header .bar{display:flex;gap:12px;align-items:center;max-width:1100px;margin:0 auto;padding:10px 16px}
+nav a{color:#cfcfcf;text-decoration:none;padding:6px 8px;border-radius:8px}nav a.active{background:#1a1a1a;color:#fff}
+.wrap{max-width:1100px;margin:20px auto;padding:0 16px}.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin:0 0 14px}
+</style>
 </head><body>
-<header class="site"><div class="bar">
-  <img src="/assets/MYnCoin_32x32.svg" alt="MYnCoin"><strong>MYnCoin</strong>
+<header><div class="bar">
+  <img src="/assets/MYnCoin_32x32.svg" width="24" height="24" alt="MYnCoin"><strong>MYnCoin</strong>
   <nav style="margin-left:auto;display:flex;gap:14px">
-    <a class="nav" href="/index.html">Home</a><a class="nav" href="/buy.html">Buy</a><a class="nav" href="/whitepaper.html">Whitepaper</a>
-    <a class="nav" href="/exchange.html">Exchange Kit</a><a class="nav" href="/deployment.html">Deployment</a>
-    <a class="nav" href="/governance.html">Governance</a><a class="nav active" href="/audit.html">Audit</a>
-    <a class="nav" href="/marketing.html">Marketing</a><a class="nav" href="/about.html">About</a><a class="nav" href="/logo.html">Logo</a>
-  </nav></div></header>
+    <a href="/index.html">Home</a><a href="/buy.html">Buy</a><a href="/whitepaper.html">Whitepaper</a>
+    <a href="/exchange.html">Exchange Kit</a><a href="/deployment.html">Deployment</a><a href="/governance.html">Governance</a>
+    <a class="active" href="/audit.html">Audit</a><a href="/marketing.html">Marketing</a><a href="/about.html">About</a><a href="/logo.html">Logo</a><a href="/compliance.html">Compliance</a>
+  </nav>
+</div></header>
+
 <main class="wrap">
-  <section class="card"><h1 style="margin:0 0 6px">Audit & Compliance</h1>
-    <ul>
-      <li>Audit report (code & tokenomics): <a href="/assets/Audit_and_Policy_Certified_MYN.pdf">download</a></li>
-      <li>Compliance pack: <a href="/assets/Compliance_Docs.pdf">download</a></li>
-    </ul>
+  <section class="card"><h1 style="margin:0 0 8px">Audit</h1>
+    <p><a class="btn dark" href="/assets/Audit_and_Policy_Certified_MYN.pdf">Download Audit PDF</a></p>
   </section>
 </main>
-<footer class="site">© MYnCoin • Contact: compliance@bkpropertiesnyc.com</footer>
+
+<footer style="max-width:1100px;margin:20px auto 40px;padding:0 16px;color:#9aa0a6;font-size:12px">© MYnCoin</footer>
 </body></html>
