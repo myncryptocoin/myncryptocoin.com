@@ -1,33 +1,36 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Governance • MYnCoin</title>
-<link rel="icon" type="image/svg+xml" href="/assets/MYnCoin_32x32.svg"><link rel="stylesheet" href="/_shared_header.css">
+<link rel="icon" type="image/svg+xml" href="/assets/MYnCoin_32x32.svg">
+<link rel="preload" href="/assets/css/style.css?v=4" as="style"><link rel="stylesheet" href="/assets/css/style.css?v=4">
+<style>
+:root{--bg:#0b0b0b;--card:#121212;--fg:#eaeaea;--muted:#9aa0a6;--border:#1f1f1f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:10;background:#0b0b0b;border-bottom:1px solid var(--border)}
+header .bar{display:flex;gap:12px;align-items:center;max-width:1100px;margin:0 auto;padding:10px 16px}
+nav a{color:#cfcfcf;text-decoration:none;padding:6px 8px;border-radius:8px}nav a.active{background:#1a1a1a;color:#fff}
+.wrap{max-width:1100px;margin:20px auto;padding:0 16px}.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin:0 0 14px}
+</style>
 </head><body>
-<header class="site"><div class="bar">
-  <img src="/assets/MYnCoin_32x32.svg" alt="MYnCoin"><strong>MYnCoin</strong>
+<header><div class="bar">
+  <img src="/assets/MYnCoin_32x32.svg" width="24" height="24" alt="MYnCoin"><strong>MYnCoin</strong>
   <nav style="margin-left:auto;display:flex;gap:14px">
-    <a class="nav" href="/index.html">Home</a><a class="nav" href="/buy.html">Buy</a><a class="nav" href="/whitepaper.html">Whitepaper</a>
-    <a class="nav" href="/exchange.html">Exchange Kit</a><a class="nav" href="/deployment.html">Deployment</a>
-    <a class="nav active" href="/governance.html">Governance</a><a class="nav" href="/audit.html">Audit</a>
-    <a class="nav" href="/marketing.html">Marketing</a><a class="nav" href="/about.html">About</a><a class="nav" href="/logo.html">Logo</a>
-  </nav></div></header>
+    <a href="/index.html">Home</a><a href="/buy.html">Buy</a><a href="/whitepaper.html">Whitepaper</a>
+    <a href="/exchange.html">Exchange Kit</a><a href="/deployment.html">Deployment</a><a class="active" href="/governance.html">Governance</a>
+    <a href="/audit.html">Audit</a><a href="/marketing.html">Marketing</a><a href="/about.html">About</a><a href="/logo.html">Logo</a><a href="/compliance.html">Compliance</a>
+  </nav>
+</div></header>
+
 <main class="wrap">
-  <section class="card"><h1 style="margin:0 0 6px">Policy</h1>
+  <section class="card"><h1 style="margin:0 0 8px">Governance</h1>
     <ul>
-      <li>Admin held by multisig `[TBD]` with timelock `[TBD]`.</li>
-      <li>Burns: executed by governance, proofs posted on the site.</li>
-      <li>Liquidity: staged adds to raise floor. LP locked and rolled on expiry.</li>
-      <li>Supply reporting: CoinGecko methodology. Exclude treasury, team/vesting, LP-locked, burn.</li>
-    </ul>
-  </section>
-  <section class="card"><h2 style="margin:0 0 6px">Wallet Labels</h2>
-    <ul>
-      <li>Treasury — 0xD085…24Da</li>
-      <li>Team/Vesting — 0xf6e9…970d</li>
-      <li>LP/Lock — 0x4079…1BBE</li>
-      <li>Burn — 0x2cA3…9752</li>
+      <li>Treasury — <code>0xD08599f6BFa47cDA06cF69B9a0B82221d63D24Da</code></li>
+      <li>Team/Vesting — <code>0xf6e9b1e8e893af97b0bc85e5f2d89bfc4772970d</code></li>
+      <li>LP/Lock — <code>0x407993575c91ce7643a4d4cCACc9A98c36eE1BBE</code></li>
+      <li>Burn — <code>0x2cA3d6b563327A5B6966728cB6b2Ec8219989752</code></li>
     </ul>
   </section>
 </main>
-<footer class="site">Questions: compliance@bkpropertiesnyc.com</footer>
+
+<footer style="max-width:1100px;margin:20px auto 40px;padding:0 16px;color:#9aa0a6;font-size:12px">© MYnCoin</footer>
 </body></html>
