@@ -2,23 +2,33 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MYnCoin — Official Site</title>
 <link rel="icon" type="image/svg+xml" href="/assets/MYnCoin_32x32.svg">
-<link rel="stylesheet" href="/_shared_header.css">
+<link rel="preload" href="/assets/css/style.css?v=4" as="style"><link rel="stylesheet" href="/assets/css/style.css?v=4">
+<style>
+:root{--bg:#0b0b0b;--card:#121212;--fg:#eaeaea;--muted:#9aa0a6;--border:#1f1f1f;--accent:#d4af37;--good:#36d399;--bad:#f87272}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header.site{position:sticky;top:0;z-index:10;background:#0b0b0b;border-bottom:1px solid var(--border)}
+header .bar{display:flex;gap:12px;align-items:center;max-width:1100px;margin:0 auto;padding:10px 16px}
+nav a{color:#cfcfcf;text-decoration:none;padding:6px 8px;border-radius:8px}nav a.active{background:#1a1a1a;color:#fff}
+.wrap{max-width:1100px;margin:20px auto;padding:0 16px}.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin:0 0 14px}
+.pill{padding:2px 8px;border-radius:999px;background:#181818}.up{color:var(--good)}.down{color:var(--bad)}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}.btn.gold{background:var(--accent);color:#111}.btn.dark{background:#1f2937;color:var(--fg)}
+footer.site{max-width:1100px;margin:20px auto 40px;padding:0 16px;color:var(--muted);font-size:12px}
+</style>
 </head><body>
 <header class="site"><div class="bar">
-  <img src="/assets/MYnCoin_32x32.svg" alt="MYnCoin"><strong>MYnCoin</strong>
+  <img src="/assets/MYnCoin_32x32.svg" alt="MYnCoin" width="24" height="24"><strong>MYnCoin</strong>
   <nav style="margin-left:auto;display:flex;gap:14px">
-    <a class="nav active" href="/index.html">Home</a><a class="nav" href="/buy.html">Buy</a>
-    <a class="nav" href="/whitepaper.html">Whitepaper</a><a class="nav" href="/exchange.html">Exchange Kit</a>
-    <a class="nav" href="/deployment.html">Deployment</a><a class="nav" href="/governance.html">Governance</a>
-    <a class="nav" href="/audit.html">Audit</a><a class="nav" href="/marketing.html">Marketing</a>
-    <a class="nav" href="/about.html">About</a><a class="nav" href="/logo.html">Logo</a>
-  </nav></div></header>
+    <a class="active" href="/index.html">Home</a><a href="/buy.html">Buy</a><a href="/whitepaper.html">Whitepaper</a>
+    <a href="/exchange.html">Exchange Kit</a><a href="/deployment.html">Deployment</a><a href="/governance.html">Governance</a>
+    <a href="/audit.html">Audit</a><a href="/marketing.html">Marketing</a><a href="/about.html">About</a><a href="/logo.html">Logo</a><a href="/compliance.html">Compliance</a>
+  </nav>
+</div></header>
 
 <main class="wrap">
   <section class="card">
     <h1 style="margin:0 0 6px">MYnCoin (MYN)</h1>
     <p class="muted" style="margin:0">BNB Smart Chain • BEP-20 • 18 decimals</p>
-    <p style="margin-top:10px">MYnCoin uses staged liquidity adds to raise the market floor over time. Governance retains admin to execute controlled burns and manage migration paths within the MY™ ecosystem.</p>
+    <p style="margin-top:10px">Staged liquidity adds to raise the market floor. Governance may execute controlled burns and manage migration paths within the MY™ ecosystem.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
       <a class="btn gold" href="/buy.html">Buy MYN</a>
       <a class="btn dark" href="https://pancakeswap.finance/swap?outputCurrency=0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2" target="_blank" rel="noopener">Swap on PancakeSwap</a>
@@ -27,65 +37,37 @@
     </div>
   </section>
 
-  <section class="card" id="live">
+  <section class="card">
     <h2 style="margin:0 0 6px">Live MYN/BNB</h2>
-    <div id="tape" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:#151515;border:1px solid var(--border);border-radius:10px;padding:8px 12px">
-      <strong>MYN/BNB</strong><span id="p" class="pill">—</span>
-      <span id="c" class="pill muted">Δ5m —</span><span id="b" class="pill">Buys 0</span>
-      <span id="s" class="pill">Sells 0</span><span id="v" class="pill muted">Vol 24h —</span>
-      <span id="u" class="muted">Updating…</span>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:#151515;border:1px solid var(--border);border-radius:10px;padding:8px 12px">
+      <strong>MYN/BNB</strong><span id="p" class="pill">—</span><span id="c" class="pill">Δ5m —</span><span id="b" class="pill">Buys 0</span><span id="s" class="pill">Sells 0</span><span id="v" class="pill">Vol 24h —</span><span id="u" style="color:var(--muted)">Updating…</span>
     </div>
   </section>
 
-  <section class="card" id="basics">
+  <section class="card">
     <h2 style="margin:0 0 6px">Contract</h2>
-    <p>BNB Smart Chain (BEP-20)</p>
-    <p>Contract: <code>0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</code></p>
+    <div>BNB Smart Chain (BEP-20)</div>
+    <div>Contract: <code>0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2</code></div>
   </section>
 </main>
 
-<footer class="site">
-  Contract: 0x5E66…7ea2 • Buy: <a href="/buy.html" style="color:var(--accent)">MYN</a>
-</footer>
+<footer class="site">Contract: 0x5E66…7ea2 • Buy: <a href="/buy.html" style="color:var(--accent)">MYN</a></footer>
 
 <script>
 (async function(){
-  const TOKEN = "0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2"; // MYN
-  const url = `https://api.dexscreener.com/latest/dex/tokens/${TOKEN}`;
-  const $ = (id) => document.getElementById(id);
-  const fmt = (n,d=6)=>{ if(n==null) return "—"; const v=+n;
-    if(!isFinite(v)) return "—"; if(v>=1) return v.toLocaleString(undefined,{maximumFractionDigits:2});
-    if(v>=0.01) return v.toLocaleString(undefined,{maximumFractionDigits:4});
-    return v.toLocaleString(undefined,{maximumSignificantDigits:d}); };
-
-  async function pull(){
-    const r = await fetch(url, {cache:"no-store"});
-    if(!r.ok) throw new Error("Dexscreener");
-    const d = await r.json();
-    // Prefer BSC pair
-    return d?.pairs?.find(p => p.chainId === "bsc") || d?.pairs?.[0];
-  }
-
-  async function update(){
-    try{
-      const p = await pull(); if(!p) return;
-      const price = p.priceUsd ?? p.priceNative ?? p.price;
-      const c5 = Number(p.priceChange?.m5 ?? 0);
-      const buys = p.txns?.m5?.buys ?? 0;
-      const sells = p.txns?.m5?.sells ?? 0;
-      const vol24 = p.volume?.h24 ?? p.volume24h ?? 0;
-
-      (document.getElementById("p")||$("myn-p")).textContent = `$${fmt(price)}`;
-      const changeEl = (document.getElementById("c")||$("myn-c"));
-      changeEl.textContent = `Δ5m ${c5>=0?"+":""}${fmt(c5,3)}%`;
-      changeEl.className = `pill ${c5>=0 ? "up" : "down"}`;
-      (document.getElementById("b")||$("myn-b")).textContent = `Buys ${buys}`;
-      (document.getElementById("s")||$("myn-s")).textContent = `Sells ${sells}`;
-      (document.getElementById("v")||$("myn-v")).textContent = `Vol 24h $${fmt(vol24,2)}`;
-      (document.getElementById("u")||$("myn-u")).textContent = `Updated ${new Date().toLocaleTimeString()}`;
-    }catch{ (document.getElementById("u")||$("myn-u")).textContent = "Update failed"; }
-  }
-  update(); setInterval(update, 5000);
+  const TOKEN="0x5E66D9Ab3876d0989A3EBB48C56e1dA5DD827ea2";
+  const URL=`https://api.dexscreener.com/latest/dex/tokens/${TOKEN}`;
+  const $=id=>document.getElementById(id);
+  const fmt=(n,d=6)=>{if(n==null)return"—";const v=+n;if(!isFinite(v))return"—";
+    if(v>=1)return v.toLocaleString(undefined,{maximumFractionDigits:2});
+    if(v>=0.01)return v.toLocaleString(undefined,{maximumFractionDigits:4});
+    return v.toLocaleString(undefined,{maximumSignificantDigits:d});};
+  async function pull(){const r=await fetch(URL,{cache:"no-store"});if(!r.ok)throw 0;const d=await r.json();return d?.pairs?.find(p=>p.chainId==="bsc")||d?.pairs?.[0];}
+  async function update(){try{const p=await pull();if(!p)return;const price=p.priceUsd??p.priceNative??p.price,c5=+(p.priceChange?.m5??0);
+    $("p").textContent=`$${fmt(price)}`;const c=$("c");c.textContent=`Δ5m ${c5>=0?"+":""}${fmt(c5,3)}%`;c.className=`pill ${c5>=0?"up":"down"}`;
+    $("b").textContent=`Buys ${p.txns?.m5?.buys??0}`;$("s").textContent=`Sells ${p.txns?.m5?.sells??0}`;$("v").textContent=`Vol 24h $${fmt(p.volume?.h24??p.volume24h??0,2)}`;$("u").textContent=`Updated ${new Date().toLocaleTimeString()}`;}
+    catch{ $("u").textContent="Update failed";}}
+  update();setInterval(update,5000);
 })();
 </script>
 </body></html>
